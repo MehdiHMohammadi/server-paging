@@ -2,6 +2,15 @@ import { useState, useEffect } from "react";
 import useFetch from "./hooks/useFetch";
 import Card from "./components/card";
 import Pagination from "./components/pagination.jsx";
+import ContextSample from "./components/contextSample";
+import Banner from "./components/banner";
+
+const card = {
+  background: "#e3e3e3",
+  // padding: "15px",
+  display: "flex",
+  justifyContent: "center",
+};
 
 const url = "https://react-mini-projects-api.classbon.com/Programmer/sieve";
 const pageSize = 4;
@@ -37,6 +46,13 @@ function App() {
           activePage={page}
         />
       </div>
+      <div className="row" style={card}>
+        <div className="text-center ">
+          <h3 style={{ color: "blue" }}>App Components</h3>
+          {/* <ContextSample /> */}
+        </div>
+      </div>
+      <div>{/* <Banner /> */}</div>
     </>
   );
 }
